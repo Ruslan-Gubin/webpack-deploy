@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkwebpack_config=self.webpackChunkwebpack_config||[]).push([[390],{390:(e,c,n)=>{n.r(c),n.d(c,{default:()=>t});var a=n(294);const t=function(){return a.createElement("h1",null,"ShopPage111")}}}]);
-//# sourceMappingURL=390.aa8ebc9f4b8c368d1962.js.map
