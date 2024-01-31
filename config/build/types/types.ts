@@ -15,7 +15,7 @@ export interface BuildOptions {
   paths: BuildPath;
   mode: BuildMode;
   analyzer?: boolean;
-  isBuild?: boolean;
+  loader: string;
 }
 
 export type BuildBabelLoader = {

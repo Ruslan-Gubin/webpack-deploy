@@ -5,9 +5,9 @@ import { buildBabelLoader } from "./babel/build-babel-loader";
 import { imageLoader } from "./image/image-loader";
 import { typescriptLoader } from "./loader/typescript-loader";
 
+
 export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
   const isDev = options.mode === "development";
-  const isBuild = options.isBuild;
 
   const fontsLoader = {
     test: /\.woff2,ttf,otf,eot?$/i,
@@ -61,8 +61,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
   const tsLoader = typescriptLoader(isDev);
   const babelLoader = buildBabelLoader(options);
 
-  //проверить на сервере если не работает prod тогда менять на tsLoader
-  const currentLoader = !isDev && !isBuild ? tsLoader : babelLoader;
+  const currentLoader = options.loader === 'babel' ? babelLoader  : tsLoader; 
 
   return [ 
     assetsLoader, 

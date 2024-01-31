@@ -9,7 +9,6 @@ dotenv.config();
 interface EnvVariables {
   mode: BuildMode;
   analyzer?: boolean;
-  isBuild?: boolean;
 }
 
 
@@ -25,6 +24,7 @@ export default(env: EnvVariables): Configuration  => {
 
   const mode = env.mode || 'development';
   const port = mode === 'production' ? process.env.PORT_PROD ?? 3001 : process.env.PORT_DEV ?? 3101;
+  const loader = process.env.LOADER ?? "babel";
   const analyzer = env.analyzer;
 
   const config: Configuration = buildWebpack({
@@ -32,7 +32,7 @@ export default(env: EnvVariables): Configuration  => {
     mode,
     paths,
     analyzer,
-    isBuild: env.isBuild,
+    loader,
   });
   return config;
 } 

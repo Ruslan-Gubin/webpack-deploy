@@ -20,6 +20,7 @@ export function buildWebpack (options: BuildOptions): Configuration {
       assetModuleFilename: "assets/[name][ext]",
       clean: true,
     },
+    
   plugins: buildPlugins(options),
   module: { rules: buildLoaders(options) },
   resolve: buildResolvers(options),

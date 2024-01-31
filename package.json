@@ -7,8 +7,8 @@
     "start:dev": "webpack serve --env mode=development",
     "start:prod": "webpack serve --env mode=production --open",
     "start:analyzer": "webpack serve --env mode=production analyzer",
-    "build:dev": "webpack --env mode=development --env isBuild=true",
-    "build:prod": "webpack --env mode=production --env isBuild=true",
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production",
     "check:types": "tsc"
   },
   "keywords": [],
