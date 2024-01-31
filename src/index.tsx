@@ -1,7 +1,7 @@
 import  { createRoot } from 'react-dom/client';
 import { App } from './componenst/App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { AboutPage, ShopPage } from '@/pages';
+import { AboutPage } from '@/pages';
 import { Suspense } from 'react';
 
 const root = document.getElementById('root');
@@ -20,16 +20,8 @@ const router = createBrowserRouter([
         path: '/about',
         element: <AboutPage/>
       },
-      {
-        path: '/shop',
-        element: <ShopPage/>
-      },
     ]
   },
 ])
 
-container.render(
-  <Suspense>
-<RouterProvider router={router} />
-  </Suspense>
-)
+container.render(<Suspense><RouterProvider router={router} /></Suspense>)

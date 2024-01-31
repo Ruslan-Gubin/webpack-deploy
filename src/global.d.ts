@@ -1,3 +1,4 @@
+
 declare module '*.module.scss' {
   interface IClassNames {
     [className: string]: string;
@@ -12,8 +13,8 @@ declare module '*.jpeg'
 declare module '*.ico'
 
 declare module "*.svg" {
-  import React from "react";
-  const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
+import type { VFC, SVGProps } from "react";
+  const SVG: VFC<SVGProps<SVGSVGElement>>;
   export default SVG;
 }
 
