@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwebpack_config=self.webpackChunkwebpack_config||[]).push([[283],{283:(e,c,n)=>{n.r(c),n.d(c,{default:()=>s});var t=n(893);const s=function(){return(0,t.jsx)("h1",{children:"About test deploy"})}}}]);
+//# sourceMappingURL=283.1ea96dc3a27ff0b82ffc.js.map
